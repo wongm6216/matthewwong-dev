@@ -38,7 +38,7 @@ export function getAllPosts(): Post[] {
         title: data.title || "",
         date: data.date || "",
         excerpt: data.excerpt || "",
-        category: data.category || "blog",
+        category: data.category || "essay",
         content,
         contentHtml: "", // Will be populated when needed
       };

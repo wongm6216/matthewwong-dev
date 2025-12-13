@@ -1,10 +1,10 @@
-import { getRecentPosts, getPostsByCategory } from "@/lib/posts";
+import { getPostsByCategory } from "@/lib/posts";
 import BlogPostCard from "./components/BlogPostCard";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
-  const recentPosts = getRecentPosts(7);
-  const essays = getPostsByCategory("essay").slice(0, 3);
+  const essays = getPostsByCategory("essay").slice(0, 7);
 
   return (
     <div className="min-h-screen">
@@ -15,57 +15,70 @@ export default function Home() {
             Matthew Wong
           </h1>
           <p className="text-xl text-zinc-600 dark:text-zinc-400 mb-6">
-            Psychology, Economics, Programming, or anything interesting.
+            Still figuring it out.
           </p>
-        </section>
-
-        {/* Introduction Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-100">
-            Hello, I'm Matthew.
-          </h2>
-          <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
-            My goal is to build technology that addresses social challenges. My past projects have
-            addressed issues like loneliness, air pollution, and legacy climate model infrastructure.
-            Most recently, I led a product team developing innovative solutions. Informed by these
-            experiences, I aim to study how technological progress can be harnessed for the public good.
-          </p>
-          <Link
-            href="/about"
-            className="inline-block mt-4 text-zinc-900 dark:text-zinc-100 font-medium hover:underline"
-          >
-            My CV
-          </Link>
-        </section>
-
-        {/* Recent Blog Posts */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
-            Recent Blog Posts
-          </h2>
-          <div className="space-y-0">
-            {recentPosts.length > 0 ? (
-              recentPosts.map((post) => (
-                <BlogPostCard key={post.slug} post={post} />
-              ))
-            ) : (
-              <p className="text-zinc-600 dark:text-zinc-400">No blog posts yet.</p>
-            )}
-          </div>
-          {recentPosts.length > 0 && (
-            <div className="mt-6">
+          <div className="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-6 hero-grid">
+            <div className="hero-image-container">
+              <Image
+                src="/profile-photo.png"
+                alt="Matthew Wong"
+                width={500}
+                height={500}
+                className="rounded-lg hero-image"
+                priority
+              />
+            </div>
+            <div className="flex flex-col hero-text-container py-[15px]">
+              <h2 className="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-100">
+                Hey, I'm Matt!
+              </h2>
+              <h3 className="text-zinc-800 dark:text-zinc-100 mb-4">
+                Math & CS @ Stanford | Los Angeles, CA 
+              </h3>
+              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">
+                My goal is to create as much impact as possible. I've previously worked in{" "}
+                <Link
+                  href="https://data.caltech.edu/records/6qgd6-9ec23"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-900 dark:text-zinc-100 underline hover:opacity-80"
+                >
+                  seismology
+                </Link>
+                ,{" "}
+                <Link
+                  href="https://rosemeadca.gov/services/community_development/new_page.php"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-900 dark:text-zinc-100 underline hover:opacity-80"
+                >
+                  building and safety
+                </Link>
+                , and{" "}
+                <Link
+                  href="https://ui.adsabs.harvard.edu/abs/2024AGUFMED41C2449W/abstract"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-900 dark:text-zinc-100 underline hover:opacity-80"
+                >
+                  geochemistry
+                </Link>
+                . Most recently I was at Palantir as a forward-deployed engineer turned deployment strategist working on the U.S. commercial sector as part of the Meritocracy Fellows Program. Through these experiences, I aim to understand how best to create social change.
+              </p>
               <Link
-                href="/writing"
-                className="text-zinc-900 dark:text-zinc-100 font-medium hover:underline"
+                href="/wong_matthew_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-medium rounded-md hover:opacity-90 transition-opacity w-fit"
               >
-                View all posts →
+                My CV
               </Link>
             </div>
-          )}
+          </div>
         </section>
 
         {/* Recent Essays */}
-        {essays.length > 0 && (
+        {essays.length > 0 ? (
           <section className="mb-16">
             <h2 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
               Recent Essays
@@ -80,9 +93,16 @@ export default function Home() {
                 href="/writing"
                 className="text-zinc-900 dark:text-zinc-100 font-medium hover:underline"
               >
-                For more academic writing, visit the scratchpad.
+                View all essays →
               </Link>
             </div>
+          </section>
+        ) : (
+          <section className="mb-16">
+            <h2 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
+              Recent Essays
+            </h2>
+            <p className="text-zinc-600 dark:text-zinc-400">No essays yet.</p>
           </section>
         )}
 

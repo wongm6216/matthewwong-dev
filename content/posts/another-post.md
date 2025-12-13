@@ -5,13 +5,12 @@ excerpt: "This is another example post to show how multiple posts work."
 category: "essay"
 ---
 
-This is another example post. You can organize your posts by category.
+This is an example essay. You can write your essays in markdown format.
 
-## Categories
+## Features
 
-Posts can be categorized as:
-- Blog posts
-- Essays
-- Tutorials
+- Easy to write
+- Version controlled
+- Fast loading
 
-This helps organize your content and display it in different sections of your website.
+You can include code blocks, images, and much more!

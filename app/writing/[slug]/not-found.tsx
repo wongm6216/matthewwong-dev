@@ -8,7 +8,7 @@ export default function NotFound() {
           Post Not Found
         </h1>
         <p className="text-zinc-600 dark:text-zinc-400 mb-8">
-          The blog post you're looking for doesn't exist.
+          The essay you're looking for doesn't exist.
         </p>
         <Link
           href="/writing"
