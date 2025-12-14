@@ -141,31 +141,3 @@ body {
   border-top-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Hero section grid alignment */
-.hero-grid {
-  align-items: stretch;
-}
-
-@media (min-width: 640px) {
-  .hero-image-container {
-    height: 100%;
-    display: flex;
-    align-items: stretch;
-  }
-  
-  .hero-image-container > div {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .hero-image {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-  }
-  
-  .hero-text-container {
-    display: flex;
-    flex-direction: column;
-  }
-}
