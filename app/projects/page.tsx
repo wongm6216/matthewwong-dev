@@ -5,8 +5,8 @@ const projects = [
     title: "Developing a Novel Dating Technique for Arctic Faults",
     description:
       "The Arctic Ocean is the last major ocean basin on Earth whose origin story remains a mystery. I developed a workflow that bypasses expensive chemical separation by using a 'spike'—a tracer of known isotopes—and running it through a standard Quadrupole Mass Spectrometer. This makes high-precision fault dating significantly faster and far cheaper than traditional methods, democratizing geochronology for standard labs.",
-    image: "/projects/Screenshot 2025-12-14 at 17.16.39.png",
-    imageAlt: "Arctic Fault Dating Technique",
+    image: "/projects/Screenshot 2025-12-14 at 17.26.39.png",
+    imageAlt: "Geologic Map of the Porcupine Fault System",
     tech: ["Mass Spectrometry", "Geochemistry", "Python", "Isotope Analysis"],
     slug: "arctic-fault-dating",
   },
