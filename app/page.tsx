@@ -23,7 +23,7 @@ export default function Home() {
                 src="/profile-photo-v2.png"
                 alt="Matthew Wong"
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover"
                 priority
                 quality={100}
                 sizes="(max-width: 768px) 100vw, 300px"
@@ -116,12 +116,20 @@ export default function Home() {
           </section>
         )}
 
-        {/* Quotes and Links Section */}
+        {/* Quotes Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
-            Quotes and Links
+            Quotes
           </h2>
           <div className="space-y-6">
+            <div className="border-l-4 border-zinc-300 dark:border-zinc-700 pl-4">
+              <p className="text-zinc-700 dark:text-zinc-300 italic mb-2">
+                "Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart."
+              </p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                — Steve Jobs
+              </p>
+            </div>
             <div className="border-l-4 border-zinc-300 dark:border-zinc-700 pl-4">
               <p className="text-zinc-700 dark:text-zinc-300 italic mb-2">
                 "The best way to predict the future is to invent it."
