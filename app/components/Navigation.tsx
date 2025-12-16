@@ -53,9 +53,9 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="border-b border-zinc-200 dark:border-zinc-800">
+    <nav className="border-b border-zinc-200 dark:border-zinc-800 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 relative">
           {/* Logo/Name */}
           <Link href="/" className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
             MW
@@ -156,31 +156,38 @@ export default function Navigation() {
               </svg>
             </button>
           </div>
+        </div>
 
-          {/* Mobile Dropdown Menu */}
-          {isMobileMenuOpen && (
-            <div className="md:hidden border-t border-zinc-200 dark:border-zinc-800">
-              <div className="px-4 pt-2 pb-4 space-y-3">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block text-sm font-medium transition-colors ${
-                      pathname === link.href
-                        ? "text-zinc-900 dark:text-zinc-100"
-                        : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+        {/* Mobile Dropdown Menu */}
+        <div
+          className={`md:hidden bg-white border-t border-zinc-200 shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-[500px] opacity-100"
+              : "max-h-0 opacity-0 pointer-events-none"
+          }`}
+        >
+            <div className="px-4 pt-4 pb-6 space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block text-base font-medium py-2 transition-colors ${
+                    pathname === link.href
+                      ? "text-zinc-900 border-l-2 border-zinc-900 pl-3 -ml-4"
+                      : "text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50 rounded px-2 -mx-2"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <div className="pt-2 border-t border-zinc-200">
                 <Link
                   href="https://github.com/wongm6216"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="flex items-center space-x-2 text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                  className="flex items-center space-x-2 text-base font-medium text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50 rounded px-2 py-2 -mx-2 transition-colors"
                   aria-label="GitHub"
                 >
                   <svg
@@ -199,9 +206,8 @@ export default function Navigation() {
                 </Link>
               </div>
             </div>
-          )}
+          </div>
         </div>
-      </div>
     </nav>
   );
 }

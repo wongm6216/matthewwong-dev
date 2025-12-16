@@ -79,7 +79,7 @@ export default function Home() {
                   href="/wong_matthew_resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-4 px-6 py-2 bg-black dark:bg-white text-white dark:text-black font-medium rounded-md hover:opacity-90 transition-opacity w-fit"
+                  className="inline-block mt-4 px-6 py-2 bg-black text-white font-medium rounded-md hover:opacity-90 transition-opacity w-fit"
                 >
                   My CV
                 </Link>

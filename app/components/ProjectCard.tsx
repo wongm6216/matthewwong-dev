@@ -19,8 +19,8 @@ export default function ProjectCard({
   slug,
 }: ProjectCardProps) {
   const content = (
-    <div className="h-full flex flex-col border border-zinc-200 dark:border-zinc-800 rounded-lg overflow-hidden bg-white dark:bg-zinc-900 hover:border-zinc-300 dark:hover:border-zinc-700 transition-colors">
-      <div className="relative w-full h-48 overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+    <div className="h-full flex flex-col border-2 border-zinc-400 rounded-lg overflow-hidden bg-[#FAF9F6] hover:border-zinc-500 transition-colors shadow-sm">
+      <div className="relative w-full h-48 overflow-hidden bg-zinc-100">
         <Image
           src={image}
           alt={imageAlt}
@@ -30,14 +30,14 @@ export default function ProjectCard({
         />
       </div>
       <div className="p-4 flex flex-col flex-1">
-        <h3 className="text-xl font-semibold mb-3 text-zinc-900 dark:text-zinc-100">
+        <h3 className="text-xl font-semibold mb-3 text-zinc-900">
           {title}
         </h3>
         <div className="flex flex-wrap gap-2">
           {tech.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-2 py-1 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded"
+              className="text-xs px-2 py-1 bg-zinc-200 text-zinc-700 rounded"
             >
               {tag}
             </span>
