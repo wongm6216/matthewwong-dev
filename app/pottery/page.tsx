@@ -1,10 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getAllPottery, PotteryPiece } from "@/lib/pottery";
+import { PotteryPiece } from "@/lib/pottery";
 import PotteryCard from "../components/PotteryCard";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function PotteryPage() {
   const [pottery, setPottery] = useState<PotteryPiece[]>([]);

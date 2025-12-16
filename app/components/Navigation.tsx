@@ -48,7 +48,6 @@ export default function Navigation() {
     { href: "/writing", label: "Writing" },
     { href: "/projects", label: "Projects" },
     { href: "/pottery", label: "Pottery" },
-    { href: "/bookshelf", label: "Bookshelf" },
     { href: "/contact", label: "Contact" },
   ];
 
