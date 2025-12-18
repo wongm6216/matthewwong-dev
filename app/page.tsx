@@ -31,16 +31,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col flex-1 py-4">
                 <h2 className="text-2xl font-semibold mb-4 text-zinc-900 dark:text-zinc-100">
-                  Hey, I'm Matt! I'm currently building{" "}
-                  <Link
-                    href="https://pothai.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-zinc-900 dark:text-zinc-100 underline hover:opacity-80"
-                  >
-                    Poth (YC S26)
-                  </Link>
-                  .
+                  Hey, I'm Matt!
                 </h2>
                 <h3 className="text-zinc-800 dark:text-zinc-100 mb-4">
                   Math & CS @ Stanford | Los Angeles, CA 
