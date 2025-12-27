@@ -5,3 +5,6 @@ export async function GET() {
   const pottery = getAllPottery();
   return NextResponse.json(pottery);
 }
+
+
+

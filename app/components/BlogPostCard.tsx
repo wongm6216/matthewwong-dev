@@ -36,3 +36,6 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     </Link>
   );
 }
+
+
+
