@@ -14,9 +14,9 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
   return (
     <Link
       href={`/writing/${post.slug}`}
-      className="block border-b border-zinc-200 dark:border-zinc-800 py-6 hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
+      className="block group border-b border-zinc-200 dark:border-zinc-800 py-6"
     >
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 group-hover:scale-[1.02] transition-transform duration-300">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
             {post.title}
@@ -36,6 +36,7 @@ export default function BlogPostCard({ post }: BlogPostCardProps) {
     </Link>
   );
 }
+
 
 
 

@@ -13,11 +13,13 @@ export default function BookshelfPage() {
           <li><span className="font-bold">Wild Swans</span> - Jung Chang</li>
           <li>The Buddha in the Attic - Julie Otsuka</li>
           <li>When Breath Becomes Air - Paul Kalanithi</li>
+          <li>Private Equity: A Memoir - Carrie Sun</li>
         </ul>
       </div>
     </div>
   );
 }
+
 
 
 

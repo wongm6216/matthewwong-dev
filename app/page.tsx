@@ -115,6 +115,14 @@ export default function Home() {
           <div className="space-y-6">
             <div className="border-l-4 border-zinc-300 dark:border-zinc-700 pl-4">
               <p className="text-zinc-700 dark:text-zinc-300 italic mb-2">
+                "You are at work on yourself, though there is, as yet, no real you; your wants are themselves a work in progress."
+              </p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                — Agnes Callard
+              </p>
+            </div>
+            <div className="border-l-4 border-zinc-300 dark:border-zinc-700 pl-4">
+              <p className="text-zinc-700 dark:text-zinc-300 italic mb-2">
                 "Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart."
               </p>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -127,14 +135,6 @@ export default function Home() {
               </p>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">
                 — Alan Kay
-              </p>
-            </div>
-            <div className="border-l-4 border-zinc-300 dark:border-zinc-700 pl-4">
-              <p className="text-zinc-700 dark:text-zinc-300 italic mb-2">
-                "You are at work on yourself, though there is, as yet, no real you; your wants are themselves a work in progress."
-              </p>
-              <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                — Agnes Callard
               </p>
             </div>
           </div>
