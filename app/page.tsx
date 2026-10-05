@@ -67,7 +67,7 @@ export default function Home() {
                   . Most recently I was at Palantir as a forward-deployed engineer turned deployment strategist working on the U.S. commercial sector as part of the Meritocracy Fellows Program. Through these experiences, I aim to understand how best to create social change.
                 </p>
                 <Link
-                  href="/wong_matthew_resume.pdf"
+                  href="/wongmatthew-resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block mt-4 px-6 py-2 bg-black text-white font-medium rounded-md hover:opacity-90 transition-opacity w-fit"
